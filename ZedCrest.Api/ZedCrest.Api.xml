@@ -1,7 +1,26 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <doc>
-	<assembly>
-		<name>ZedCrest.Api</name>
-	</assembly>
-
+    <assembly>
+        <name>ZedCrest.Api</name>
+    </assembly>
+    <members>
+        <member name="T:ZedCrest.Api.Controllers.ValueCheckerController">
+            <summary>
+            ValueChcker: Checks if a value is a multiple of 3 and/or 5
+            </summary>
+        </member>
+        <member name="M:ZedCrest.Api.Controllers.ValueCheckerController.#ctor(ZedCrest.Data.Interfaces.IValueCheckerRepository)">
+            <summary>
+            Provides access to the logic
+            </summary>
+            <param name="valueCheckerRepository"></param>
+        </member>
+        <member name="M:ZedCrest.Api.Controllers.ValueCheckerController.CheckValue(System.Int32)">
+            <summary>
+            Checks if a value is a multiple of 3 and/or 5
+            </summary>
+            <param name="value">parameter to check</param>
+            <returns>a string value showing Fizz for 3, Buzz for 5 and FizzBuzz for 3 and 5 else return value </returns>
+        </member>
+    </members>
 </doc>

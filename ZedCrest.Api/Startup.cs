@@ -57,7 +57,7 @@ namespace ZedCrest.Api
                     // Set the comments path for the Swagger JSON and UI.
                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                    c.IncludeXmlComments(xmlPath, false);
+                    c.IncludeXmlComments(xmlPath, true);
                });
 
                services.Configure<ApiBehaviorOptions>(options =>
@@ -97,15 +97,11 @@ namespace ZedCrest.Api
 
 
                app.UseSwagger();
-
-               if (!env.IsProduction())
+               app.UseSwaggerUI(c =>
                {
-                    app.UseSwaggerUI(c =>
-                    {
-                         c.SwaggerEndpoint("/swagger/v1/swagger.json", "ZEDCREST API V1");
-                         c.RoutePrefix = string.Empty;
-                    });
-               }
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ZEDCREST API V1");
+                    c.RoutePrefix = string.Empty;
+               });
 
                app.UseHttpsRedirection();
                app.UseRouting();
