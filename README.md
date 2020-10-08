@@ -1,21 +1,15 @@
-﻿# MyKab Project
+﻿# ZedCrest Dev Challenge Project
 
-This is the project for MyKab, it is a ride hailing platform, that allows you to request a ride and cab. 
+This is the project for ZedCrest Dev Challenge. 
 
 ## ASP.NET Core Required.
 
-Please kindly install the latest asp.net core or .net core starting from ASP.NET Core 2.2.
+Please kindly install the latest asp.net core or .net core starting from ASP.NET Core 3.1.
 
 Here some of the dependencies
 
-1. ASP.NET Core 2.2 and .NET Core 2.2
-2. EntityFramework Core
-3. PayStack.NET SDK
-4. SendGrid
-5. Twilio SMS API
-6. Swagger
-7. IdentityServer4
-8. AutoMapper
+1. ASP.NET Core 3.1 and .NET Core 3.1
+2. Swagger
 
 
 Please check the project nuggets packages.
