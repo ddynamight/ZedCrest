@@ -104,5 +104,18 @@ namespace ZedCrest.Data.Test
                // Assert
                Assert.AreEqual("FizzBuzz", result);
           }
+
+          [DataTestMethod]
+          [DataRow(204)]
+          public void Check_If_Repo_Returns_Value(int value)
+          {
+               //Arrange
+
+               //Act
+               var result = valueCheckerRepository.IsMultiple(value);
+
+               //Assert
+               Assert.IsNotNull(result);
+          }
      }
 }
